@@ -3,6 +3,7 @@ const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv');
 dotenv.config();
 
+const port = 3000;
 const connect = require('./models/index');
 const gamesRouter = require('./routes/games');
 
@@ -19,6 +20,6 @@ app.get('/', (req, res) => {
 
 app.use('/games', gamesRouter);
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("API running on port 3000");
 });
